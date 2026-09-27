@@ -1,0 +1,24 @@
+
+AIRA SDR Estarreja - Pacote Final para gerar APK
+
+CONTEÚDO:
+- MainActivity.kt, SdrForegroundService.kt -> código que liga a https://sdr.aira.pt, com ecrã ajustado 100% e WakeLock para tocar com ecrã desligado
+- AndroidManifest.xml -> permissões WAKE_LOCK, FOREGROUND_SERVICE, nome "AIRA SDR Estarreja"
+- activity_main.xml, build.gradle
+- build.bat (Windows) e build.sh (Linux/Mac) -> duplo clique compila APK sozinho
+- .github/workflows/build.yml -> para compilar no GitHub sem instalar nada
+
+OPÇÃO 1 - WINDOWS 1 CLIQUE:
+1. Descompacta
+2. Duplo clique em build.bat
+3. Espera 3-5 min (descarrega SDK)
+4. APK fica em app/build/outputs/apk/debug/app-debug.apk
+
+OPÇÃO 2 - GITHUB (sem instalar nada):
+1. Cria repo novo no github.com
+2. Faz upload de todos os ficheiros deste zip
+3. Vai a Actions > Build AIRA SDR APK > Run workflow
+4. No fim descarrega o artifact "AIRA-SDR-Estarreja-APK" - é o teu APK instalável
+
+Depois de instalar no telemóvel:
+Definições > Apps > AIRA SDR Estarreja > Bateria > Sem restrições
